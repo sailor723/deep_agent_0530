@@ -41,6 +41,31 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 如果你使用 Windows 包管理器，也可以参考 `uv` 官方安装文档中的 `winget` 方式。
 
+如果你更习惯 Linux 命令行，也可以在 Windows 上使用 WSL。
+
+WSL 快速安装与打开方式：
+
+```powershell
+# 以管理员身份打开 PowerShell 后执行
+wsl --install
+```
+
+安装完成并重启后，可以用以下任一方式打开 WSL：
+
+```powershell
+wsl
+```
+
+```powershell
+ubuntu
+```
+
+进入 WSL 后，可以按 Linux 方式安装 `uv`：
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
 安装完成后，可以用下面的命令确认是否安装成功：
 
 ```bash
