@@ -19,12 +19,45 @@
 - Python 3.11 及以上
 - 使用 [uv](https://docs.astral.sh/uv/) 进行依赖管理
 
+## 安装 uv
+
+如果你的本机还没有安装 `uv`，可以先使用以下任一方式安装：
+
+```bash
+# macOS / Linux 官方安装脚本
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+```bash
+# macOS 也可以使用 Homebrew
+brew install uv
+```
+
+Windows 用户建议优先使用 PowerShell 官方安装方式：
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+如果你使用 Windows 包管理器，也可以参考 `uv` 官方安装文档中的 `winget` 方式。
+
+安装完成后，可以用下面的命令确认是否安装成功：
+
+```bash
+uv --version
+```
+
+`uv` 官方文档：
+
+- 安装说明: <https://docs.astral.sh/uv/getting-started/installation/>
+- 使用说明: <https://docs.astral.sh/uv/>
+
 ## 快速开始
 
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/<your-account>/deep_agent_0530.git
+git clone git@github.com:sailor723/deep_agent_0530.git
 cd deep_agent_0530
 ```
 
@@ -32,6 +65,19 @@ cd deep_agent_0530
 
 ```bash
 uv sync
+```
+
+常用 `uv` 用法示例：
+
+```bash
+# 安装并同步当前项目依赖
+uv sync
+
+# 在项目环境中运行 Python 脚本
+uv run python check_model.py
+
+# 启动 Jupyter
+uv run jupyter notebook
 ```
 
 3. 创建本地环境变量文件：
@@ -48,12 +94,24 @@ cp example.env .env
 TAVILY_API_KEY=your_tavily_api_key_here
 ```
 
+获取 Tavily API Key：
+
+- 平台主页: <https://app.tavily.com/>
+- 快速开始文档: <https://docs.tavily.com/documentation/quickstart>
+
 根据你实际运行的笔记本或脚本不同，可能还需要填写一个或多个模型提供方的密钥，例如：
 
 ```env
 DEEPSEEK_API_KEY=your_deepseek_api_key_here
 MINIMAX_API_KEY=your_minimax_api_key_here
 ```
+
+获取模型 API Key：
+
+- DeepSeek 平台: <https://platform.deepseek.com/>
+- DeepSeek 文档: <https://api-docs.deepseek.com/quick_start>
+- MiniMax 平台: <https://platform.minimax.io/login>
+- MiniMax 文档: <https://platform.minimax.io/docs/guides/quickstart-preparation>
 
 仓库中的部分本地实验脚本还默认依赖兼容 Ollama 的本地接口。
 
