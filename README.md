@@ -39,6 +39,12 @@ Windows 用户建议优先使用 PowerShell 官方安装方式：
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
+如果你使用的是 Windows `cmd`，也可以直接执行下面的命令调用 PowerShell 安装：
+
+```bat
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
 如果你使用 Windows 包管理器，也可以参考 `uv` 官方安装文档中的 `winget` 方式。
 
 如果你更习惯 Linux 命令行，也可以在 Windows 上使用 WSL。
@@ -112,6 +118,39 @@ deep_agent_0530.zip
 uv sync
 ```
 
+如果你在中国大陆网络环境下安装较慢，可以临时使用 PyPI 镜像加速 `uv sync`。
+
+推荐镜像：
+
+- 清华镜像: `https://pypi.tuna.tsinghua.edu.cn/simple`
+- 阿里云镜像: `https://mirrors.aliyun.com/pypi/simple`
+
+临时使用示例：
+
+```bash
+UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple uv sync
+```
+
+如果你使用的是 Windows PowerShell：
+
+```powershell
+$env:UV_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
+uv sync
+```
+
+如果你使用的是 Windows CMD：
+
+```bat
+set UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+uv sync
+```
+
+说明：
+
+- 这里建议只对 Python 包下载使用镜像
+- GitHub 仓库地址、API 平台地址、登录页面、密钥管理页面仍建议使用官方地址
+- 如果镜像源异常，可直接去掉 `UV_INDEX_URL` 后重试官方源
+
 常用 `uv` 用法示例：
 
 ```bash
@@ -121,8 +160,11 @@ uv sync
 # 在项目环境中运行 Python 脚本
 uv run python check_model.py
 
-# 启动 Jupyter
+# 启动 Jupyter Notebook
 uv run jupyter notebook
+
+# 启动 JupyterLab
+uv run jupyter lab
 ```
 
 3. 创建本地环境变量文件：
@@ -163,7 +205,11 @@ MINIMAX_API_KEY=your_minimax_api_key_here
 5. 启动 Jupyter：
 
 ```bash
+# 打开 Jupyter Notebook
 uv run jupyter notebook
+
+# 打开 JupyterLab
+uv run jupyter lab
 ```
 
 ## 学习路径
