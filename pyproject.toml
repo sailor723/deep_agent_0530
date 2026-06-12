@@ -19,10 +19,17 @@ dependencies = [
     "tavily-python>=0.5.0",
     "httpx>=0.28.1",
     "markdownify>=1.2.0",
-    "deepagents>=0.0.3",
+    "deepagents>=0.6.7",
     "python-dotenv>=1.2.1",
     "langchain-deepseek>=1.0.1",
     "langchain-ollama>=1.0.1",
+    "langchain-google-genai>=4.2.3",
+    "sounddevice>=0.5.5",
+    "mammoth",
+    "python-docx>=1.2.0",
+    "pyyaml>=6.0",
+    "gradio",
+    "ddgs>=9.14.4",
 ]
 
 [project.optional-dependencies]

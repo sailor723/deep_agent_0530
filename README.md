@@ -161,10 +161,10 @@ uv sync
 uv run python check_model.py
 
 # 启动 Jupyter Notebook
-uv run jupyter notebook
+uv run python -m notebook
 
 # 启动 JupyterLab
-uv run jupyter lab
+uv run python -m jupyterlab
 ```
 
 3. 创建本地环境变量文件：
@@ -206,10 +206,10 @@ MINIMAX_API_KEY=your_minimax_api_key_here
 
 ```bash
 # 打开 Jupyter Notebook
-uv run jupyter notebook
+uv run python -m notebook
 
 # 打开 JupyterLab
-uv run jupyter lab
+uv run python -m jupyterlab
 ```
 
 ## 学习路径
