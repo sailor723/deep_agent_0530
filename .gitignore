@@ -8,6 +8,48 @@ __pycache__/
 
 ls-academy/
 
+# Node / Deno
+node_modules/
+
+# Temp / scratch files
+tmp_*
+_tmp_*
+zz_*
+_tmp*
+_fetch*
+_run_fetch*
+check_py*
+check_sys*
+check_tools*
+exec_fetch*
+exec_runner*
+exec_test*
+run_fetch*
+run_me*
+run_wrapper*
+try_fetch*
+fetch_output*
+fetch_result*
+llms_content*
+llms_index*
+fetch_httpx*
+fetch_mini*
+fetch_simple*
+fetch_llms*
+fetch_and_save*
+fetch_docs*
+fetch_final*
+test_exec*
+tmp_calc*
+
+# Documents
+*.docx
+*.pdf
+
+# Archives
+*.zip
+*.tar.gz
+
 # Distribution / packaging
 .Python
 build/
