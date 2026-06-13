@@ -30,6 +30,10 @@ dependencies = [
     "pyyaml>=6.0",
     "gradio",
     "ddgs>=9.14.4",
+    "matplotlib>=3.11.0",
+    "seaborn>=0.13.2",
+    "langchain-core>=1.4.0",
+    "langchain-experimental>=0.4.1",
 ]
 
 [project.optional-dependencies]

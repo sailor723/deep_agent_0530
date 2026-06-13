@@ -1,0 +1,4 @@
+Region,Quantity,Product_Category,Unit_Price,Discount
+US,20,Software,500.0,100.0
+EMEA,2,Hardware,1250.0,10.0
+LATAM,1,Services,2100.0,50.0
