@@ -107,6 +107,8 @@ async def stream_agent(agent, query, config=None):
             node, result = list(event.items())[0]
             print(f'Node: {node}')
             
+            if result is None:
+                continue
             for key in result.keys():
                 if "messages" in key:
                     # print(f"Messages key: {key}")
